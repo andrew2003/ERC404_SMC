@@ -1,0 +1,14 @@
+{
+  "dev": {},
+  "sepolia": {
+    "DeployerAddress": "0x9799b4C076E6b3454Ae5056DBad3Bd7241646728",
+    "Hero404": "0xE3b620bA76eE255dC27E3A9808bc280cDde1bAEe",
+    "Vault": "0x318664Ba0CB30a26BaC13e103167bA620f0A929a",
+    "ERC404Marketplace": "0xbCf64864f0Ae5ED9932c582E4AECe3E09Bf142d1",
+    "Auction": "0x0859Dd8F1327908df007c871Af969863b38023FF"
+  },
+  "ipfs": {
+    "pinata": "https://ipfs.io/ipfs/"
+  },
+  "main": {}
+}

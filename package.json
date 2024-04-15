@@ -1,0 +1,23 @@
+{
+  "name": "open404-marketplace",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "deploy": "npx hardhat run scripts/deploy.ts --network",
+    "test": "npx hardhat test",
+    "verify": "npx hardhat verify --network"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@openzeppelin/contracts": "^5.0.2",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.2",
+    "openzeppelin-solidity": "^3.4.2",
+    "web3": "^4.5.0",
+    "yarn": "^1.22.21"
+  }
+}
