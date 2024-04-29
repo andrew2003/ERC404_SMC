@@ -14,7 +14,7 @@ contract USDT is ERC20, ERC20Burnable, AccessControl {
   using Math for uint256;
   using SafeERC20 for ERC20;
 
-  constructor() ERC20("Tether USD", "USDT") {
+  constructor() ERC20("Tether USDT", "USDT") {
     owner = payable(msg.sender);
   }
 

@@ -1,14 +1,14 @@
 {
   "dev": {},
   "sepolia": {
-    "DeployerAddress": "0x9799b4C076E6b3454Ae5056DBad3Bd7241646728",
-    "Hero404": "0xE3b620bA76eE255dC27E3A9808bc280cDde1bAEe",
-    "Vault": "0x318664Ba0CB30a26BaC13e103167bA620f0A929a",
-    "ERC404Marketplace": "0xbCf64864f0Ae5ED9932c582E4AECe3E09Bf142d1",
-    "Auction": "0x0859Dd8F1327908df007c871Af969863b38023FF"
+    "DeployerAddress": "0x714891E7d24939edC75C00694858b1CF8dfe9518",
+    "Token404": "0xFc3880aCC8d5345B9b50F4bc0b4aF8a01B107C81",
+    "Vault": "0x616BA9aD11c7D05Ee0A0e4157aaD90B331acf7D3",
+    "USDT": "0xe6D73d56DE480F8E86F8Fa62FE12f343a88901Ce"
   },
   "ipfs": {
-    "pinata": "https://ipfs.io/ipfs/"
+    "pinata": "https://ipfs.io/ipfs/",
+    "github_json": "https://githun"
   },
   "main": {}
 }

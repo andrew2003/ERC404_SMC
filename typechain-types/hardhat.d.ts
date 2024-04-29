@@ -70,26 +70,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.SafeERC20__factory>;
     getContractFactory(
-      name: "ERC721",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.ERC721__factory>;
-    getContractFactory(
-      name: "ERC721Enumerable",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.ERC721Enumerable__factory>;
-    getContractFactory(
-      name: "IERC721Enumerable",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.IERC721Enumerable__factory>;
-    getContractFactory(
-      name: "IERC721Metadata",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.IERC721Metadata__factory>;
-    getContractFactory(
-      name: "IERC721",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.IERC721__factory>;
-    getContractFactory(
       name: "IERC721Receiver",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IERC721Receiver__factory>;
@@ -138,17 +118,9 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.PackedDoubleEndedQueue__factory>;
     getContractFactory(
-      name: "Auction",
+      name: "Simple404",
       signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.Auction__factory>;
-    getContractFactory(
-      name: "ERC404Marketplace",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.ERC404Marketplace__factory>;
-    getContractFactory(
-      name: "Hero404",
-      signerOrOptions?: ethers.Signer | FactoryOptions
-    ): Promise<Contracts.Hero404__factory>;
+    ): Promise<Contracts.Simple404__factory>;
     getContractFactory(
       name: "USDT",
       signerOrOptions?: ethers.Signer | FactoryOptions
@@ -229,31 +201,6 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.SafeERC20>;
     getContractAt(
-      name: "ERC721",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.ERC721>;
-    getContractAt(
-      name: "ERC721Enumerable",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.ERC721Enumerable>;
-    getContractAt(
-      name: "IERC721Enumerable",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.IERC721Enumerable>;
-    getContractAt(
-      name: "IERC721Metadata",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.IERC721Metadata>;
-    getContractAt(
-      name: "IERC721",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.IERC721>;
-    getContractAt(
       name: "IERC721Receiver",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -314,20 +261,10 @@ declare module "hardhat/types/runtime" {
       signer?: ethers.Signer
     ): Promise<Contracts.PackedDoubleEndedQueue>;
     getContractAt(
-      name: "Auction",
+      name: "Simple404",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
-    ): Promise<Contracts.Auction>;
-    getContractAt(
-      name: "ERC404Marketplace",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.ERC404Marketplace>;
-    getContractAt(
-      name: "Hero404",
-      address: string | ethers.Addressable,
-      signer?: ethers.Signer
-    ): Promise<Contracts.Hero404>;
+    ): Promise<Contracts.Simple404>;
     getContractAt(
       name: "USDT",
       address: string | ethers.Addressable,
@@ -396,26 +333,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.SafeERC20>;
     deployContract(
-      name: "ERC721",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.ERC721>;
-    deployContract(
-      name: "ERC721Enumerable",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.ERC721Enumerable>;
-    deployContract(
-      name: "IERC721Enumerable",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IERC721Enumerable>;
-    deployContract(
-      name: "IERC721Metadata",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IERC721Metadata>;
-    deployContract(
-      name: "IERC721",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IERC721>;
-    deployContract(
       name: "IERC721Receiver",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IERC721Receiver>;
@@ -464,17 +381,9 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.PackedDoubleEndedQueue>;
     deployContract(
-      name: "Auction",
+      name: "Simple404",
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.Auction>;
-    deployContract(
-      name: "ERC404Marketplace",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.ERC404Marketplace>;
-    deployContract(
-      name: "Hero404",
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.Hero404>;
+    ): Promise<Contracts.Simple404>;
     deployContract(
       name: "USDT",
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -555,31 +464,6 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.SafeERC20>;
     deployContract(
-      name: "ERC721",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.ERC721>;
-    deployContract(
-      name: "ERC721Enumerable",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.ERC721Enumerable>;
-    deployContract(
-      name: "IERC721Enumerable",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IERC721Enumerable>;
-    deployContract(
-      name: "IERC721Metadata",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IERC721Metadata>;
-    deployContract(
-      name: "IERC721",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.IERC721>;
-    deployContract(
       name: "IERC721Receiver",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -640,20 +524,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.PackedDoubleEndedQueue>;
     deployContract(
-      name: "Auction",
+      name: "Simple404",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.Auction>;
-    deployContract(
-      name: "ERC404Marketplace",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.ERC404Marketplace>;
-    deployContract(
-      name: "Hero404",
-      args: any[],
-      signerOrOptions?: ethers.Signer | DeployContractOptions
-    ): Promise<Contracts.Hero404>;
+    ): Promise<Contracts.Simple404>;
     deployContract(
       name: "USDT",
       args: any[],

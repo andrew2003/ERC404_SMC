@@ -32,7 +32,6 @@ export interface Hero404Interface extends Interface {
       | "approve"
       | "balanceOf"
       | "baseTokenURI"
-      | "dataURI"
       | "decimals"
       | "erc20Approve"
       | "erc20BalanceOf"
@@ -47,7 +46,6 @@ export interface Hero404Interface extends Interface {
       | "getERC721QueueLength"
       | "getERC721TokensInQueue"
       | "isApprovedForAll"
-      | "metaDescription"
       | "minted"
       | "name"
       | "nonces"
@@ -59,9 +57,7 @@ export interface Hero404Interface extends Interface {
       | "safeTransferFrom(address,address,uint256)"
       | "safeTransferFrom(address,address,uint256,bytes)"
       | "setApprovalForAll"
-      | "setDataURI"
       | "setERC721TransferExempt"
-      | "setMetaDescription"
       | "setSelfERC721TransferExempt"
       | "setTokenURI"
       | "supportsInterface"
@@ -108,7 +104,6 @@ export interface Hero404Interface extends Interface {
     functionFragment: "baseTokenURI",
     values?: undefined
   ): string;
-  encodeFunctionData(functionFragment: "dataURI", values?: undefined): string;
   encodeFunctionData(functionFragment: "decimals", values?: undefined): string;
   encodeFunctionData(
     functionFragment: "erc20Approve",
@@ -162,10 +157,6 @@ export interface Hero404Interface extends Interface {
     functionFragment: "isApprovedForAll",
     values: [AddressLike, AddressLike]
   ): string;
-  encodeFunctionData(
-    functionFragment: "metaDescription",
-    values?: undefined
-  ): string;
   encodeFunctionData(functionFragment: "minted", values?: undefined): string;
   encodeFunctionData(functionFragment: "name", values?: undefined): string;
   encodeFunctionData(functionFragment: "nonces", values: [AddressLike]): string;
@@ -203,14 +194,9 @@ export interface Hero404Interface extends Interface {
     functionFragment: "setApprovalForAll",
     values: [AddressLike, boolean]
   ): string;
-  encodeFunctionData(functionFragment: "setDataURI", values: [string]): string;
   encodeFunctionData(
     functionFragment: "setERC721TransferExempt",
     values: [AddressLike, boolean]
-  ): string;
-  encodeFunctionData(
-    functionFragment: "setMetaDescription",
-    values: [string]
   ): string;
   encodeFunctionData(
     functionFragment: "setSelfERC721TransferExempt",
@@ -259,7 +245,6 @@ export interface Hero404Interface extends Interface {
     functionFragment: "baseTokenURI",
     data: BytesLike
   ): Result;
-  decodeFunctionResult(functionFragment: "dataURI", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "decimals", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "erc20Approve",
@@ -313,10 +298,6 @@ export interface Hero404Interface extends Interface {
     functionFragment: "isApprovedForAll",
     data: BytesLike
   ): Result;
-  decodeFunctionResult(
-    functionFragment: "metaDescription",
-    data: BytesLike
-  ): Result;
   decodeFunctionResult(functionFragment: "minted", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "name", data: BytesLike): Result;
   decodeFunctionResult(functionFragment: "nonces", data: BytesLike): Result;
@@ -340,13 +321,8 @@ export interface Hero404Interface extends Interface {
     functionFragment: "setApprovalForAll",
     data: BytesLike
   ): Result;
-  decodeFunctionResult(functionFragment: "setDataURI", data: BytesLike): Result;
   decodeFunctionResult(
     functionFragment: "setERC721TransferExempt",
-    data: BytesLike
-  ): Result;
-  decodeFunctionResult(
-    functionFragment: "setMetaDescription",
     data: BytesLike
   ): Result;
   decodeFunctionResult(
@@ -549,8 +525,6 @@ export interface Hero404 extends BaseContract {
 
   baseTokenURI: TypedContractMethod<[], [string], "view">;
 
-  dataURI: TypedContractMethod<[], [string], "view">;
-
   decimals: TypedContractMethod<[], [bigint], "view">;
 
   erc20Approve: TypedContractMethod<
@@ -607,8 +581,6 @@ export interface Hero404 extends BaseContract {
     "view"
   >;
 
-  metaDescription: TypedContractMethod<[], [string], "view">;
-
   minted: TypedContractMethod<[], [bigint], "view">;
 
   name: TypedContractMethod<[], [string], "view">;
@@ -655,16 +627,8 @@ export interface Hero404 extends BaseContract {
     "nonpayable"
   >;
 
-  setDataURI: TypedContractMethod<[_dataURI: string], [void], "nonpayable">;
-
   setERC721TransferExempt: TypedContractMethod<
     [account_: AddressLike, value_: boolean],
-    [void],
-    "nonpayable"
-  >;
-
-  setMetaDescription: TypedContractMethod<
-    [_metaDesc: string],
     [void],
     "nonpayable"
   >;
@@ -740,9 +704,6 @@ export interface Hero404 extends BaseContract {
     nameOrSignature: "baseTokenURI"
   ): TypedContractMethod<[], [string], "view">;
   getFunction(
-    nameOrSignature: "dataURI"
-  ): TypedContractMethod<[], [string], "view">;
-  getFunction(
     nameOrSignature: "decimals"
   ): TypedContractMethod<[], [bigint], "view">;
   getFunction(
@@ -809,9 +770,6 @@ export interface Hero404 extends BaseContract {
     "view"
   >;
   getFunction(
-    nameOrSignature: "metaDescription"
-  ): TypedContractMethod<[], [string], "view">;
-  getFunction(
     nameOrSignature: "minted"
   ): TypedContractMethod<[], [bigint], "view">;
   getFunction(
@@ -869,18 +827,12 @@ export interface Hero404 extends BaseContract {
     "nonpayable"
   >;
   getFunction(
-    nameOrSignature: "setDataURI"
-  ): TypedContractMethod<[_dataURI: string], [void], "nonpayable">;
-  getFunction(
     nameOrSignature: "setERC721TransferExempt"
   ): TypedContractMethod<
     [account_: AddressLike, value_: boolean],
     [void],
     "nonpayable"
   >;
-  getFunction(
-    nameOrSignature: "setMetaDescription"
-  ): TypedContractMethod<[_metaDesc: string], [void], "nonpayable">;
   getFunction(
     nameOrSignature: "setSelfERC721TransferExempt"
   ): TypedContractMethod<[state_: boolean], [void], "nonpayable">;
